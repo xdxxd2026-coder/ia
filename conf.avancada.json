@@ -1,0 +1,41 @@
+{
+  "neurogenesis_config": {
+    "hardware": {
+      "device": "auto",
+      "memory_limit_gb": 16,
+      "precision": "mixed"
+    },
+    "models": {
+      "llm": {
+        "default": "microsoft/phi-2",
+        "large": "meta-llama/Llama-2-13b-chat-hf",
+        "quantized": "TheBloke/Llama-2-7B-GGUF"
+      },
+      "code": {
+        "default": "Salesforce/codegen-16B-multi",
+        "small": "microsoft/codereviewer"
+      },
+      "image": {
+        "default": "stabilityai/stable-diffusion-2-1",
+        "xl": "stabilityai/stable-diffusion-xl-base-1.0"
+      },
+      "audio": {
+        "tts": "facebook/fastspeech2-en-ljspeech",
+        "stt": "facebook/wav2vec2-large-960h-lv60-self"
+      }
+    },
+    "learning": {
+      "reinforcement_learning": true,
+      "self_play": true,
+      "curriculum_learning": true,
+      "meta_learning": false
+    },
+    "modules": {
+      "code_generation": true,
+      "image_generation": true,
+      "audio_generation": true,
+      "video_generation": false,
+      "multimodal_reasoning": true
+    }
+  }
+}
